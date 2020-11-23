@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:flightsearch/Resources/Private/Language/locallang" date="2020-09-07T13:42:41Z" product-name="flightsearch">
+		<header/>
+		<body>
+			<trans-unit id="tx_flightsearch_domain_model_flight" resname="tx_flightsearch_domain_model_flight">
+				<source>Flight</source>
+			</trans-unit>
+			<trans-unit id="tx_flightsearch_domain_model_flight.title" resname="tx_flightsearch_domain_model_flight.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_flightsearch_domain_model_flight.datetimestart" resname="tx_flightsearch_domain_model_flight.datetimestart">
+				<source>Datetimestart</source>
+			</trans-unit>
+			<trans-unit id="tx_flightsearch_domain_model_flight.city_start" resname="tx_flightsearch_domain_model_flight.city_start">
+				<source>City Start</source>
+			</trans-unit>
+			<trans-unit id="tx_flightsearch_domain_model_flight.city_end" resname="tx_flightsearch_domain_model_flight.city_end">
+				<source>City End</source>
+			</trans-unit>
+			<trans-unit id="tx_flightsearch_domain_model_city" resname="tx_flightsearch_domain_model_city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_flightsearch_domain_model_city.name" resname="tx_flightsearch_domain_model_city.name">
+				<source>Name</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

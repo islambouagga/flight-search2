@@ -1,0 +1,50 @@
+<f:layout name="default" />
+<f:section name="content">
+<h1>Show Blog</h1>
+<div class="card">
+    <h5 class="card-header">
+        {blog.title}
+    </h5>
+    <div class="card-body">
+        <p class="card-text">
+            <f:format.nl2br>{blog.description}</f:format.nl2br>
+        </p>
+    </div>
+</div>
+    <f:if condition="{blog.posts}">
+        <ul class="list-group">
+            <f:for each="{blog.posts}" as="post">
+                <li class="list-group-item d-flex justify-content-between align-items-center">{post.title}
+                    <div class="tags">
+                        <f:for each="{post.tags}" as="tag">
+                            <span class="badge badge-pill badge-secondary">{tag.tagvalue}</span>
+                        </f:for>
+                    </div>
+                    <div>
+                        <f:link.action action="deleteConfirm" controller="Post" arguments="{blog: blog, post: post}" class="btn btn-primary btn-sm pull-right">
+                            <i class="fas fa-trash"></i>
+                            DELETE
+                        </f:link.action>
+                        <f:link.action action="updateForm" controller="Post" arguments="{blog: blog, post: post}"
+                                       class="btn btn-primary btn-sm pull-right margin-right">
+                            <i class="fas fa-edit"></i>
+                            EDIT
+                        </f:link.action>
+                        <f:link.action action="show" controller="Post" arguments="{blog: blog, post: post}"
+                                       class="btn btn-primary btn-sm pull-right margin-right">
+                            <i class="fas fa-eye"></i>
+                            SHOW
+                        </f:link.action>
+                    </div>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+    <f:link.action controller="Post" action="addForm" arguments="{blog: blog}" class="btn btn-primary">
+        <i class="fas fa-plus-circle"></i>
+        Add Post
+    </f:link.action>
+<f:link.action action="list" class="btn btn-primary">
+    Back to Blog list
+</f:link.action>
+</f:section>

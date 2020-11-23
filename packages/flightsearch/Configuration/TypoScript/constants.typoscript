@@ -1,0 +1,15 @@
+
+plugin.tx_flightsearch_flightlist {
+    view {
+        # cat=plugin.tx_flightsearch_flightlist/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:flightsearch/Resources/Private/Templates/
+        # cat=plugin.tx_flightsearch_flightlist/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:flightsearch/Resources/Private/Partials/
+        # cat=plugin.tx_flightsearch_flightlist/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:flightsearch/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_flightsearch_flightlist//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

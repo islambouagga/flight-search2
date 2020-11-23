@@ -1,0 +1,40 @@
+{namespace simpleblog = ExtbaseBook\Simpleblog\ViewHelpers}
+<f:layout name="default" />
+
+<f:section name="content">
+<h1>Blog List</h1>
+    <simpleblog:dummyText />
+    <f:form action="list" additionalAttributes="{role: 'form'}">
+        <div class="input-group mb-3">
+            <f:form.textfield name="search" value="{search}" class="form-control" />
+            <div class="input-group-append">
+                <f:form.submit value="Search" class="btn btn-outline-secondary" />
+            </div>
+        </div>
+    </f:form>
+
+<ul class="list-group">
+    <f:for each="{blogs}" as="blog">
+        <li class="list-group-item d-flex justify-content-between align-items-center">{blog.title}
+            <div>
+            <f:link.action action="updateForm" arguments="{blog: blog}" class="btn btn-success btn-sm">
+                <i class="fas fa-edit"></i>
+                EDIT
+            </f:link.action>
+            <f:link.action action="show" arguments="{blog: blog}" class="btn btn-primary btn-sm">
+                <i class="fas fa-eye"></i>
+                SHOW
+            </f:link.action>
+            <f:link.action action="delete" arguments="{blog: blog}" class="btn btn-danger btn-sm">
+                <i class="fas fa-trash"></i>
+                DELETE
+            </f:link.action>
+            </div>
+        </li>
+    </f:for>
+</ul>
+    <p><small>Max {settings.blog.max} Blogs are shown.</small></p>
+<f:link.action action="addForm" class="btn btn-primary">
+    Add Blogs
+</f:link.action>
+</f:section>

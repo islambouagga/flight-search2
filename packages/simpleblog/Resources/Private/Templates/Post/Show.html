@@ -1,0 +1,32 @@
+<f:layout name="default" />
+<f:section name="content">
+    <h1>Show Post</h1>
+    <p>
+        This post belongs to Blog: <strong>&quot;{blog.title}&quot;</strong>.
+    </p>
+    <p class="card-text">
+        Author: {post.author.fullname} (Email: {post.author.email})
+    </p>
+    <div class="card">
+        <h5 class="card-header">
+            {post.title}
+            <span class="float-right">
+<f:format.date date="{post.postdate}" format="d/M/Y" />
+</span>
+        </h5>
+        <div class="card-body">
+            <p class="card-text">
+                <f:format.nl2br>{post.content}</f:format.nl2br>
+            </p>
+            <p class="card-text tags">
+                <f:for each="{post.tags}" as="tag">
+                    <span class="badge badge-pill badge-secondary">{tag.tagvalue}</span>
+                </f:for>
+            </p>
+        </div>
+    </div>
+    <f:link.action action="show" controller="Blog" arguments="{blog: blog}" class="btn btn-primary">
+        <i class="fas fa-list"></i>
+        Back to Blog
+    </f:link.action>
+</f:section>

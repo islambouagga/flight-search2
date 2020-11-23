@@ -1,0 +1,29 @@
+{
+    "name": "extbasebook/flightsearch",
+    "type": "typo3-cms-extension",
+    "description": "flightsearch",
+    "authors": [
+        {
+            "name": "islam",
+            "role": "Developer"
+        }
+    ],
+	"version": "1.0.0",
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ExtbaseBook\\Flightsearch\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ExtbaseBook\\Flightsearch\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "extbasebook/flightsearch": "self.version",
+        "typo3-ter/flightsearch": "self.version"
+    }
+}

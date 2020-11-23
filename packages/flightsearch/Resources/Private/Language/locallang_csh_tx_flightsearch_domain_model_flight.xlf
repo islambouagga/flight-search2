@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:flightsearch/Resources/Private/Language/locallang_csh" date="2020-09-07T13:42:41Z" product-name="flightsearch">
+		<header/>
+		<body>
+			<trans-unit id="title.description" resname="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="datetimestart.description" resname="datetimestart.description">
+				<source>datetimestart</source>
+			</trans-unit>
+			<trans-unit id="city_start.description" resname="city_start.description">
+				<source>cityStart</source>
+			</trans-unit>
+			<trans-unit id="city_end.description" resname="city_end.description">
+				<source>cityEnd</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
